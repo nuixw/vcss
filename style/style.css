@@ -1,0 +1,5 @@
+@import 'style/var.json';
+@import 'style/import.css';
+
+body{background:$color;font-size:$size;}
+button{$style}
