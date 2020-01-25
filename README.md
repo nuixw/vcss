@@ -68,4 +68,12 @@ Le fichier css générer qu'à partir du moment où votre css de base est modifi
 $vcss->Cache(0);
 ```
 
-/!\ Attention, cela empêche les navigateurs de mettre le css en cache, mais il peux au contraire permettre de désactiver les cache forcer des navigateurs. A n'utiliser qu'en phase de développement.
+/!\ Attention, cet fonction empêche les navigateurs de mettre le css en cache. A n'utiliser qu'en phase de développement.
+
+
+## Auteur
+
+Vcss a été créé par un petit développeur front-end ! Soyez indulgent et n'hésitez-pas à y apporter vos modifications, elles sont les bienvenues !
+
+www.nuixw.fr
+
