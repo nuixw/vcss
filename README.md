@@ -10,69 +10,52 @@ Importer vcss.php dans votre page.
 require_once('vcss.php');
 ```
 
-Initialisez ensuite Vcss
+Initialisez ensuite Vcss avec le chemin relatif de votre css
 
 ```
 $vcss = new Vcss('./css/style.css');
 ```
 
-Appel du de la balise <link>
+Appellez ensuite la balise link dans votre <head>
 
 ```
 <link rel="stylesheet" href="<?php $vcss->Create();?>">
 ```
 
-## Running the tests
+Vcss va créer un fichier compressé dans le dossier de votre css
 
-Explain how to run the automated tests for this system
 
-### Break down into end to end tests
+## Utilisation des variables
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+Pour utiliser des variables, importer d'accord un fichier nommé var.json au haut de votre css, avec son chemin relatif
 
 ```
-Give an example
+@import 'style/var.json';
 ```
 
-## Deployment
+Créez vos variables dans votre fichier var.json
 
-Add additional notes about how to deploy this on a live system
+```
+{
+    "$color": "#000",
+    "$size": "15px",
+    "$style": "background:#333;color:#fff;border-radius:5px;"
+}
+```
 
-## Built With
+Et vous n'avez plus cas appeler vos variables qui seront retranscrites dans le css après la compression
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+```
+body{background:$color;font-size:$size;}
+button{$style}
+```
 
-## Contributing
+## @import css
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Avec Vcss vous ne pouvez utiliser la fonction @import que pour importer le fichier var.json et des css avec leurs chemins relatifs
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+```
+@import 'style/var.json';
+@import 'style/import.css';
+```
 
