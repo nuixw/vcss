@@ -57,5 +57,15 @@ Avec Vcss vous ne pouvez utiliser la fonction @import que pour importer le fichi
 ```
 @import 'style/var.json';
 @import 'style/import.css';
+@import ...
 ```
 
+## Cache
+
+Le fichier css générer qu'à partir du moment où votre css de base est modifié. Si vous voulez désactiver cette fonction et régénerer le cache à chaque rechargement de la page web en appellant la fonction cache avec en valeur 0
+
+```
+$vcss->Cache(0);
+```
+
+/!\ Attention, cela empêche les navigateurs de mettre le css en cache, mais il peux au contraire permettre de désactiver les cache forcer des navigateurs. A n'utiliser qu'en phase de développement.
