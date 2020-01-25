@@ -1,26 +1,26 @@
 # Vcss
 
-CSS variables in PHP
+Vcss est un moyen facile d'utiliser des variables CSS, accessible sur tout navigateur.
 
-## Getting Started
+### Installation
 
-Vcss is an easy way to create CSS variables, accessible on any browser.
-
-### Installing
-
-Include in your page vcss.php
+Importer vcss.php dans votre page.
 
 ```
 require_once('vcss.php');
 ```
 
-And repeat
+Initialisez ensuite Vcss
 
 ```
-until finished
+$vcss = new Vcss('./css/style.css');
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Appel du de la balise <link>
+
+```
+<link rel="stylesheet" href="<?php $vcss->Create();?>">
+```
 
 ## Running the tests
 
