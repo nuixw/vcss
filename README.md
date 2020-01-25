@@ -10,24 +10,24 @@ Importer vcss.php dans votre page.
 require_once('vcss.php');
 ```
 
-Initialisez ensuite Vcss avec le chemin relatif de votre css
+Initialisez ensuite Vcss avec le chemin relatif de votre css.
 
 ```
 $vcss = new Vcss('./css/style.css');
 ```
 
-Appellez ensuite la balise link dans votre <head>
+Appellez ensuite la balise <link> dans votre <head>.
 
 ```
 <link rel="stylesheet" href="<?php $vcss->Create();?>">
 ```
 
-Vcss va créer un fichier compressé dans le dossier de votre css
+Vcss va créer un fichier compressé dans le dossier de votre css.
 
 
 ## Utilisation des variables
 
-Pour utiliser des variables, importer d'accord un fichier nommé var.json au haut de votre css, avec son chemin relatif
+Pour utiliser des variables, importer d'accord un fichier nommé var.json au haut de votre css, avec son chemin relatif.
 
 ```
 @import 'style/var.json';
@@ -43,7 +43,7 @@ Créez vos variables dans votre fichier var.json
 }
 ```
 
-Et vous n'avez plus cas appeler vos variables qui seront retranscrites dans le css après la compression
+Et vous n'avez plus cas appeler vos variables qui seront retranscrites dans le css après la compression.
 
 ```
 body{background:$color;font-size:$size;}
@@ -52,7 +52,7 @@ button{$style}
 
 ## @import css
 
-Avec Vcss vous ne pouvez utiliser la fonction @import que pour importer le fichier var.json et des css avec leurs chemins relatifs
+Avec Vcss vous ne pouvez utiliser la fonction @import que pour importer le fichier var.json et des css avec leurs chemins relatifs.
 
 ```
 @import 'style/var.json';
@@ -62,7 +62,7 @@ Avec Vcss vous ne pouvez utiliser la fonction @import que pour importer le fichi
 
 ## Cache
 
-Le fichier css générer qu'à partir du moment où votre css de base est modifié. Si vous voulez désactiver cette fonction et régénerer le cache à chaque rechargement de la page web en appellant la fonction cache avec en valeur 0
+Le fichier css générer qu'à partir du moment où votre css de base est modifié. Si vous voulez désactiver cette fonction et régénerer le cache à chaque rechargement de la page web en appellant la fonction cache avec en valeur 0.
 
 ```
 $vcss->Cache(0);
