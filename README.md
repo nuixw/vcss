@@ -68,7 +68,7 @@ Le fichier css générer qu'à partir du moment où votre css de base est modifi
 $vcss->Cache(0);
 ```
 
-/!\ Attention, cet fonction empêche les navigateurs de mettre le css en cache. A n'utiliser qu'en phase de développement.
+/!\ Attention, cette fonction empêche les navigateurs de mettre le css en cache, à n'utiliser qu'en phase de développement.
 
 
 ## Auteur
