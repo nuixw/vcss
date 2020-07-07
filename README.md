@@ -4,7 +4,7 @@ Vcss est un moyen facile d'utiliser des variables CSS, accessible sur tout navig
 
 ### Installation
 
-Importer vcss.php dans votre page.
+Importer vcss.php dans votre site.
 
 ```
 require_once('vcss.php');
@@ -27,7 +27,7 @@ Vcss va créer un fichier compressé dans le dossier de votre css.
 
 ## Utilisation des variables
 
-Pour utiliser des variables, importer d'accord un fichier nommé var.json au haut de votre css, avec son chemin relatif.
+Pour utiliser des variables, importer d'abord un fichier nommé var.json au haut de votre css, avec son chemin relatif.
 
 ```
 @import 'style/var.json';
