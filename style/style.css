@@ -2,4 +2,4 @@
 @import 'style/import.css';
 
 body{background:$color;font-size:$size;}
-button{$style}
+button{$style;color:#ff0000;}
